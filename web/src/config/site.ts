@@ -76,6 +76,10 @@ export const siteConfig = {
       href: '/articles'
     },
     {
+      label: 'docs',
+      href: '/docs'
+    },
+    {
       label: 'about',
       href: '/about'
     }

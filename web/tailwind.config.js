@@ -24,9 +24,12 @@ module.exports = {
       animation: {
         heartbeat: 'heartbeat 1s ease-in-out infinite',
         'infinite-scroll': 'infinite-scroll 25s linear infinite'
+      },
+      fontFamily: {
+        'mono': ['JetBrains Mono', 'Fira Code', 'monospace'],
       }
     }
   },
   darkMode: 'class',
-  plugins: [nextui()]
+  plugins: [nextui(), require('@tailwindcss/typography')]
 };

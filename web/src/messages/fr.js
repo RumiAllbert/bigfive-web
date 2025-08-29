@@ -66,6 +66,7 @@ const french = {
     }
   },
   toolbar: {
+    docs: 'Documentation API',
     home: 'Home',
     result: 'Résultat',
     compare: 'Comparer',
