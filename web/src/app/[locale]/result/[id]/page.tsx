@@ -1,3 +1,6 @@
+// Force dynamic rendering to avoid build-time database calls
+export const dynamic = 'force-dynamic';
+
 import { Report, getTestResult } from '@/actions';
 import { Snippet } from '@nextui-org/snippet';
 import { useTranslations } from 'next-intl';
