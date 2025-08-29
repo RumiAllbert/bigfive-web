@@ -76,8 +76,13 @@ export async function POST(request: NextRequest) {
       return 'neutral';
     };
 
-    // Prepare results object
-    const assessmentResults = {
+    // Prepare results object with proper typing
+    const assessmentResults: {
+      overall: { [key: string]: { score: number; count: number; result: string } };
+      facets: { [key: string]: { [key: number]: { score: number; count: number; result: string } } };
+      generatedAt: Date;
+      rawScores: { [key: string]: { score: number; count: number } };
+    } = {
       overall: {},
       facets: {},
       generatedAt: new Date(),
