@@ -69,7 +69,7 @@ export class AssessmentService {
     await assessmentsCollection.updateOne(
       { assessmentId },
       {
-        $push: { answers: { $each: answers } },
+        $push: { answers: { $each: answers } } as any,
         $set: { updatedAt: new Date() }
       }
     );
