@@ -2,20 +2,18 @@
 export const dynamic = 'force-dynamic';
 
 import { Report, getTestResult } from '@/actions';
+import { Alert } from '@/components/alert';
+import { BarChart } from '@/components/bar-chart';
+import { title } from '@/components/primitives';
+import ShareBar from '@/components/share-bar';
+import { supportEmail } from '@/config/site';
+import { Link } from '@/navigation';
+import { Chip } from '@nextui-org/react';
 import { Snippet } from '@nextui-org/snippet';
 import { useTranslations } from 'next-intl';
-import { title } from '@/components/primitives';
-import { DomainPage } from './domain';
-import { Domain } from '@bigfive-org/results';
 import { getTranslations } from 'next-intl/server';
-import { BarChart } from '@/components/bar-chart';
-import { Link } from '@/navigation';
-import { ReportLanguageSwitch } from './report-language-switch';
-import { Alert } from '@/components/alert';
-import { supportEmail } from '@/config/site';
-import ShareBar from '@/components/share-bar';
 import { DomainTabs } from './domain-tabs';
-import { Chip } from '@nextui-org/react';
+import { ReportLanguageSwitch } from './report-language-switch';
 
 export async function generateMetadata({
   params: { locale }

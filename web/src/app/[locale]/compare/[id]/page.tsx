@@ -1,8 +1,8 @@
-import { base64url } from '@/lib/helpers';
 import { getTestResult } from '@/actions';
-import { title } from '@/components/primitives';
-import { DomainComparePage } from './domain';
 import { BarChartCompare } from '@/components/bar-chart-generic';
+import { title } from '@/components/primitives';
+import { base64url } from '@/lib/helpers';
+import { DomainComparePage } from './domain';
 
 // Force dynamic rendering to avoid build-time database calls
 export const dynamic = 'force-dynamic';

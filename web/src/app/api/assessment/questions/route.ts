@@ -19,10 +19,10 @@ export async function POST(request: NextRequest) {
     // Get questions for the specified language (fallback to English if unsupported)
     let questions;
     try {
-      questions = await getItems(language as any);
+      questions = getItems(language as any);
     } catch (error) {
       console.warn(`Language '${language}' not supported, falling back to English`);
-      questions = await getItems('en' as any);
+      questions = getItems('en' as any);
     }
     const assessmentInfo = getInfo();
 
@@ -72,10 +72,10 @@ export async function GET(request: NextRequest) {
     // Get questions for the specified language (fallback to English if unsupported)
     let questions;
     try {
-      questions = await getItems(language as any);
+      questions = getItems(language as any);
     } catch (error) {
       console.warn(`Language '${language}' not supported, falling back to English`);
-      questions = await getItems('en' as any);
+      questions = getItems('en' as any);
     }
     const assessmentInfo = getInfo();
 
