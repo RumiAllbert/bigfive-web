@@ -1,0 +1,131 @@
+service: bigfive-api-serverless
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  stage: ${opt:stage, 'dev'}
+  environment:
+    NODE_ENV: ${opt:stage, 'dev'}
+
+  # Lambda function settings
+  memorySize: 512
+  timeout: 30
+  logRetentionInDays: 30
+
+  # IAM permissions for Lambda functions
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents
+          Resource: "*"
+
+# Package settings
+package:
+  individually: true
+  exclude:
+    - "web/**"
+    - "packages/**"
+    - "old-packages/**"
+    - "*.md"
+    - "test-*.js"
+    - "performance-test.js"
+    - "api-*.js"
+    - ".git/**"
+    - "node_modules/**"
+
+# Function definitions
+functions:
+  # Assessment Questions API
+  getQuestions:
+    handler: src/lambda/questions.handler
+    events:
+      - http:
+          path: /assessment/questions
+          method: get
+          cors: true
+      - http:
+          path: /assessment/questions
+          method: post
+          cors: true
+
+  # Assessment Answers API
+  submitAnswers:
+    handler: src/lambda/answers.handler
+    events:
+      - http:
+          path: /assessment/answers
+          method: post
+          cors: true
+
+  # Assessment Results API
+  getResults:
+    handler: src/lambda/results.handler
+    events:
+      - http:
+          path: /assessment/results
+          method: post
+          cors: true
+
+  # Assessment History API
+  getHistory:
+    handler: src/lambda/history.handler
+    events:
+      - http:
+          path: /assessment/history
+          method: get
+          cors: true
+
+  # Assessment Status API
+  getStatus:
+    handler: src/lambda/status.handler
+    events:
+      - http:
+          path: /assessment/status
+          method: get
+          cors: true
+
+# Custom resources
+resources:
+  Resources:
+    # API Gateway configuration
+    ApiGatewayRestApi:
+      Type: AWS::ApiGateway::RestApi
+      Properties:
+        Name: ${self:service}-${self:provider.stage}
+        Description: Big Five Personality Assessment API
+        EndpointConfiguration:
+          Types:
+            - REGIONAL
+
+    # CORS configuration for all endpoints
+    ApiGatewayMethodOptions:
+      Type: AWS::ApiGateway::Method
+      Properties:
+        RestApiId: !Ref ApiGatewayRestApi
+        ResourceId: !GetAtt ApiGatewayRestApi.RootResourceId
+        HttpMethod: OPTIONS
+        AuthorizationType: NONE
+        MethodResponses:
+          - StatusCode: 200
+            ResponseHeaders:
+              Access-Control-Allow-Origin: "'*'"
+              Access-Control-Allow-Headers: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
+              Access-Control-Allow-Methods: "'GET,POST,OPTIONS'"
+
+# Plugins
+plugins:
+  - serverless-offline # For local development
+  - serverless-dotenv-plugin # For environment variables
+
+# Custom configuration
+custom:
+  serverless-offline:
+    httpPort: 3001
+    host: "0.0.0.0"
