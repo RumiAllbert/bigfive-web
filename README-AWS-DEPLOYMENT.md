@@ -53,12 +53,25 @@ NODE_ENV=development
 npm install
 ```
 
-2. Start local development server:
+2. **Test your changes** (recommended):
+```bash
+node test-runner.js all
+```
+
+3. Start local development server:
 ```bash
 npm run dev
 ```
 
 This will start the serverless offline plugin on `http://localhost:3001`
+
+### Development Workflow
+
+1. **Make changes** to Lambda functions in `src/lambda/`
+2. **Run tests** to ensure functionality: `node test-runner.js all`
+3. **Start local server** for manual testing: `npm run dev`
+4. **Test API endpoints** using the examples below
+5. **Deploy when ready**: `./deploy.sh --stage dev`
 
 ## Testing
 
@@ -76,11 +89,11 @@ node test-runner.js coverage    # Run with coverage report
 
 2. **Direct Jest Commands**:
 ```bash
-npm test              # Run all tests
-npm run test:unit     # Run unit tests only
-npm run test:integration # Run integration tests only
-npm run test:coverage # Run with coverage report
-npm run test:watch    # Run tests in watch mode
+npx jest test/lambda/ --verbose              # Run all tests
+npx jest test/lambda/*.test.ts --verbose     # Run unit tests only
+npx jest test/lambda/integration.test.ts --verbose # Run integration tests only
+npx jest test/lambda/ --coverage             # Run with coverage report
+npx jest test/lambda/ --watch                 # Run tests in watch mode
 ```
 
 ### Test Structure
@@ -115,25 +128,41 @@ Tests provide coverage for:
 - CORS and security headers
 - Complete assessment workflow
 
+### Test Results
+
+When you run the tests, you should see:
+- **43 tests passing** across 6 test suites
+- **Questions API**: 10 tests (GET/POST, validation, language fallback)
+- **Answers API**: 12 tests (validation, error handling, score validation)
+- **Results API**: 8 tests (calculation, Big Five domains, error handling)
+- **History API**: 4 tests (stateless behavior)
+- **Status API**: 5 tests (assessment status, user extraction)
+- **Integration**: 3 tests (complete workflow, CORS, error handling)
+
+All tests should pass with no failures before deploying to AWS.
+
 ## Deployment
 
-### Development Environment
+### Quick Deployment (Recommended)
 
 ```bash
-npm run deploy:dev
-```
+# Deploy to development environment
+./deploy.sh --stage dev
 
-### Production Environment
-
-```bash
-npm run deploy:prod
+# Deploy to production environment
+./deploy.sh --stage prod
 ```
 
 ### Manual Deployment
 
 ```bash
+# Using Serverless Framework directly
 serverless deploy --stage dev
 serverless deploy --stage prod
+
+# Or using npm scripts (if package-lambda.json is used)
+npm run deploy:dev
+npm run deploy:prod
 ```
 
 ## API Endpoints
@@ -157,8 +186,9 @@ curl -X POST "https://your-api-id.execute-api.us-east-1.amazonaws.com/dev/assess
   -d '{
     "assessmentId": "assessment_test-user_1234567890",
     "answers": [
-      {"questionId": "1", "score": 4},
-      {"questionId": "2", "score": 3}
+      {"questionId": "43c98ce8-a07a-4dc2-80f6-c1b2a2485f06", "score": 4},
+      {"questionId": "d50a597f-632b-4f7b-89e6-6d85b50fd1c9", "score": 3},
+      {"questionId": "888dd864-7449-4e96-8d5c-7a439603ea91", "score": 5}
     ]
   }'
 ```
@@ -170,8 +200,9 @@ curl -X POST "https://your-api-id.execute-api.us-east-1.amazonaws.com/dev/assess
   -d '{
     "assessmentId": "assessment_test-user_1234567890",
     "answers": [
-      {"questionId": "1", "score": 4},
-      {"questionId": "2", "score": 3}
+      {"questionId": "43c98ce8-a07a-4dc2-80f6-c1b2a2485f06", "score": 4},
+      {"questionId": "d50a597f-632b-4f7b-89e6-6d85b50fd1c9", "score": 3},
+      {"questionId": "888dd864-7449-4e96-8d5c-7a439603ea91", "score": 5}
     ],
     "language": "en"
   }'
@@ -213,11 +244,13 @@ The API provides all the necessary data in responses for you to store as needed.
 
 1. **Cold Start Performance**: Lambda functions may have cold starts. Consider provisioned concurrency.
 
-2. **MongoDB Connection Timeout**: Ensure your MongoDB instance is accessible from AWS Lambda.
+2. **Memory Issues**: Monitor CloudWatch logs for memory-related errors and adjust Lambda memory allocation.
 
-3. **Memory Issues**: Monitor CloudWatch logs for memory-related errors and adjust Lambda memory allocation.
+3. **Timeout Errors**: If functions timeout, increase the timeout setting in `serverless.yml`.
 
-4. **Timeout Errors**: If functions timeout, increase the timeout setting in `serverless.yml`.
+4. **Test Failures**: Run `node test-runner.js all` locally to verify everything works before deploying.
+
+5. **API Gateway Errors**: Check CloudWatch logs for API Gateway specific errors and ensure proper IAM permissions.
 
 ### Logs:
 
@@ -240,5 +273,6 @@ If migrating from the Vercel version:
 For issues specific to the AWS deployment:
 1. Check CloudWatch logs
 2. Verify environment variables
-3. Test MongoDB connectivity
+3. Run local tests: `node test-runner.js all`
 4. Review AWS Lambda and API Gateway configurations
+5. Check API Gateway logs for request/response details
