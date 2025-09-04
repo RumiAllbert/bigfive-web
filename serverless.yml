@@ -92,6 +92,15 @@ functions:
           method: get
           cors: true
 
+  # Test API
+  testFunction:
+    handler: src/lambda/test.handler
+    events:
+      - http:
+          path: /test
+          method: get
+          cors: true
+
 # Custom resources
 resources:
   Resources:
