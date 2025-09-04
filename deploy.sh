@@ -105,7 +105,7 @@ if [ "$BUILD" = true ]; then
     # Install dependencies
     if [ ! -d "node_modules" ]; then
         print_info "Installing dependencies..."
-        npm install
+        npm install --legacy-peer-deps
     fi
 
     # Build TypeScript
