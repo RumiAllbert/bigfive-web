@@ -133,8 +133,8 @@ export default function DocsPage() {
             </h4>
             <div className='mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg'>
               <p className='text-sm text-blue-800 mb-3'>
-                💡 <strong>Quick Test:</strong> Click the "Test API" button at
-                the top of this page to test the API immediately!
+                💡 <strong>Quick Test:</strong> Click the &quot;Test API&quot;
+                button at the top of this page to test the API immediately!
               </p>
             </div>
             <div className='grid md:grid-cols-2 gap-4 mb-4'>
@@ -159,7 +159,7 @@ export default function DocsPage() {
   -d '{"userId": "test-user"}'`}</code>
                 </pre>
                 <p className='text-xs text-gray-600 mt-2'>
-                  Or use the "Test API" button
+                  Or use the &quot;Test API&quot; button
                 </p>
               </div>
             </div>
@@ -199,7 +199,7 @@ export default function DocsPage() {
                 3. Get Your Live API URL
               </h5>
               <p className='text-sm text-gray-700 mb-2'>
-                After deployment, you'll get an API Gateway URL like:
+                After deployment, you&apos;ll get an API Gateway URL like:
               </p>
               <pre className='bg-gray-900 text-gray-100 p-2 rounded text-xs overflow-x-auto'>
                 <code>
@@ -551,8 +551,8 @@ curl -X POST YOUR_API_URL/assessment/results \\
                 Get Assessment History
               </h3>
               <p className='text-gray-600 mb-4'>
-                Get user's assessment history. Returns empty array since this is
-                a stateless API.
+                Get user&apos;s assessment history. Returns empty array since
+                this is a stateless API.
               </p>
 
               <div className='space-y-4'>
