@@ -82,19 +82,8 @@ if ! aws sts get-caller-identity &> /dev/null; then
     exit 1
 fi
 
-# Check if .env file exists
-if [ ! -f ".env" ]; then
-    print_warning ".env file not found. Creating basic configuration..."
-    cat > .env << EOF
-# AWS Configuration
-AWS_REGION=us-east-1
-AWS_PROFILE=default
-
-# Environment
-NODE_ENV=development
-EOF
-    print_success "Created basic .env file (no database configuration needed)"
-fi
+# Note: Environment variables are configured in serverless.yml
+# No .env file needed as AWS_REGION is provided automatically by Lambda
 
 print_success "Prerequisites check passed"
 

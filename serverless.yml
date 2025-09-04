@@ -107,7 +107,6 @@ resources:
 # Plugins
 plugins:
   - serverless-offline # For local development
-  - serverless-dotenv-plugin # For environment variables
 
 # Custom configuration
 custom:
