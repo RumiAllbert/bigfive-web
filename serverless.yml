@@ -4,7 +4,7 @@ frameworkVersion: "3"
 
 provider:
   name: aws
-  runtime: nodejs20.x
+  runtime: nodejs18.x
   region: us-east-1
   stage: ${opt:stage, 'dev'}
   environment:
@@ -45,7 +45,7 @@ package:
 functions:
   # Assessment Questions API
   getQuestions:
-    handler: src/lambda/questions.handler
+    handler: dist/lambda/questions.handler
     events:
       - http:
           path: /assessment/questions
@@ -58,7 +58,7 @@ functions:
 
   # Assessment Answers API
   submitAnswers:
-    handler: src/lambda/answers.handler
+    handler: dist/lambda/answers.handler
     events:
       - http:
           path: /assessment/answers
@@ -67,7 +67,7 @@ functions:
 
   # Assessment Results API
   getResults:
-    handler: src/lambda/results.handler
+    handler: dist/lambda/results.handler
     events:
       - http:
           path: /assessment/results
@@ -76,7 +76,7 @@ functions:
 
   # Assessment History API
   getHistory:
-    handler: src/lambda/history.handler
+    handler: dist/lambda/history.handler
     events:
       - http:
           path: /assessment/history
@@ -85,7 +85,7 @@ functions:
 
   # Assessment Status API
   getStatus:
-    handler: src/lambda/status.handler
+    handler: dist/lambda/status.handler
     events:
       - http:
           path: /assessment/status
@@ -94,7 +94,7 @@ functions:
 
   # Test API
   testFunction:
-    handler: src/lambda/test.handler
+    handler: dist/lambda/test.handler
     events:
       - http:
           path: /test

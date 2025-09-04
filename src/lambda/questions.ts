@@ -136,7 +136,7 @@ const handlePost = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyR
   }
 };
 
-// Main handler function - Force redeploy with Node.js 20.x
+// Main handler function
 export const handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
   console.log('Questions API called:', {
     method: event.httpMethod,

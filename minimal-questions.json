@@ -1,0 +1,920 @@
+{
+  "questions": [
+    {
+      "id": "43c98ce8-a07a-4dc2-80f6-c1b2a2485f06",
+      "text": "Worry about things",
+      "keyed": "plus",
+      "domain": "N",
+      "facet": 1,
+      "ipipId": [
+        "H1157",
+        "X5"
+      ],
+      "num": 1,
+      "choices": [
+        {
+          "text": "Very Inaccurate",
+          "score": 1,
+          "color": 1
+        },
+        {
+          "text": "Moderately Inaccurate",
+          "score": 2,
+          "color": 2
+        },
+        {
+          "text": "Neither Accurate Nor Inaccurate",
+          "score": 3,
+          "color": 3
+        },
+        {
+          "text": "Moderately Accurate",
+          "score": 4,
+          "color": 4
+        },
+        {
+          "text": "Very Accurate",
+          "score": 5,
+          "color": 5
+        }
+      ]
+    },
+    {
+      "id": "d50a597f-632b-4f7b-89e6-6d85b50fd1c9",
+      "text": "Make friends easily",
+      "keyed": "plus",
+      "domain": "E",
+      "facet": 1,
+      "ipipId": [
+        "H29"
+      ],
+      "num": 2,
+      "choices": [
+        {
+          "text": "Very Inaccurate",
+          "score": 1,
+          "color": 1
+        },
+        {
+          "text": "Moderately Inaccurate",
+          "score": 2,
+          "color": 2
+        },
+        {
+          "text": "Neither Accurate Nor Inaccurate",
+          "score": 3,
+          "color": 3
+        },
+        {
+          "text": "Moderately Accurate",
+          "score": 4,
+          "color": 4
+        },
+        {
+          "text": "Very Accurate",
+          "score": 5,
+          "color": 5
+        }
+      ]
+    },
+    {
+      "id": "888dd864-7449-4e96-8d5c-7a439603ea91",
+      "text": "Have a vivid imagination",
+      "keyed": "plus",
+      "domain": "O",
+      "facet": 1,
+      "ipipId": [
+        "X14"
+      ],
+      "num": 3,
+      "choices": [
+        {
+          "text": "Very Inaccurate",
+          "score": 1,
+          "color": 1
+        },
+        {
+          "text": "Moderately Inaccurate",
+          "score": 2,
+          "color": 2
+        },
+        {
+          "text": "Neither Accurate Nor Inaccurate",
+          "score": 3,
+          "color": 3
+        },
+        {
+          "text": "Moderately Accurate",
+          "score": 4,
+          "color": 4
+        },
+        {
+          "text": "Very Accurate",
+          "score": 5,
+          "color": 5
+        }
+      ]
+    },
+    {
+      "id": "ce2fbbf8-7a97-4199-bda5-117e4ecdf3b6",
+      "text": "Trust others",
+      "keyed": "plus",
+      "domain": "A",
+      "facet": 1,
+      "ipipId": [
+        "H113",
+        "X6"
+      ],
+      "num": 4,
+      "choices": [
+        {
+          "text": "Very Inaccurate",
+          "score": 1,
+          "color": 1
+        },
+        {
+          "text": "Moderately Inaccurate",
+          "score": 2,
+          "color": 2
+        },
+        {
+          "text": "Neither Accurate Nor Inaccurate",
+          "score": 3,
+          "color": 3
+        },
+        {
+          "text": "Moderately Accurate",
+          "score": 4,
+          "color": 4
+        },
+        {
+          "text": "Very Accurate",
+          "score": 5,
+          "color": 5
+        }
+      ]
+    },
+    {
+      "id": "c7f53c3c-2e77-432f-bb71-7470b67d3aa9",
+      "text": "Complete tasks successfully",
+      "keyed": "plus",
+      "domain": "C",
+      "facet": 1,
+      "ipipId": [
+        "H1285"
+      ],
+      "num": 5,
+      "choices": [
+        {
+          "text": "Very Inaccurate",
+          "score": 1,
+          "color": 1
+        },
+        {
+          "text": "Moderately Inaccurate",
+          "score": 2,
+          "color": 2
+        },
+        {
+          "text": "Neither Accurate Nor Inaccurate",
+          "score": 3,
+          "color": 3
+        },
+        {
+          "text": "Moderately Accurate",
+          "score": 4,
+          "color": 4
+        },
+        {
+          "text": "Very Accurate",
+          "score": 5,
+          "color": 5
+        }
+      ]
+    },
+    {
+      "id": "48ad12ce-470e-4339-90ac-ea8c43a0103e",
+      "text": "Get angry easily",
+      "keyed": "plus",
+      "domain": "N",
+      "facet": 2,
+      "ipipId": [
+        "H754",
+        "X18"
+      ],
+      "num": 6,
+      "choices": [
+        {
+          "text": "Very Inaccurate",
+          "score": 1,
+          "color": 1
+        },
+        {
+          "text": "Moderately Inaccurate",
+          "score": 2,
+          "color": 2
+        },
+        {
+          "text": "Neither Accurate Nor Inaccurate",
+          "score": 3,
+          "color": 3
+        },
+        {
+          "text": "Moderately Accurate",
+          "score": 4,
+          "color": 4
+        },
+        {
+          "text": "Very Accurate",
+          "score": 5,
+          "color": 5
+        }
+      ]
+    },
+    {
+      "id": "458f3957-2359-4077-ade1-34525d633063",
+      "text": "Love large parties",
+      "keyed": "plus",
+      "domain": "E",
+      "facet": 2,
+      "ipipId": [
+        "H78",
+        "X17"
+      ],
+      "num": 7,
+      "choices": [
+        {
+          "text": "Very Inaccurate",
+          "score": 1,
+          "color": 1
+        },
+        {
+          "text": "Moderately Inaccurate",
+          "score": 2,
+          "color": 2
+        },
+        {
+          "text": "Neither Accurate Nor Inaccurate",
+          "score": 3,
+          "color": 3
+        },
+        {
+          "text": "Moderately Accurate",
+          "score": 4,
+          "color": 4
+        },
+        {
+          "text": "Very Accurate",
+          "score": 5,
+          "color": 5
+        }
+      ]
+    },
+    {
+      "id": "58d571e5-d725-4cf8-a438-32c16ee28eb6",
+      "text": "Believe in the importance of art",
+      "keyed": "plus",
+      "domain": "O",
+      "facet": 2,
+      "ipipId": [
+        "X123"
+      ],
+      "num": 8,
+      "choices": [
+        {
+          "text": "Very Inaccurate",
+          "score": 1,
+          "color": 1
+        },
+        {
+          "text": "Moderately Inaccurate",
+          "score": 2,
+          "color": 2
+        },
+        {
+          "text": "Neither Accurate Nor Inaccurate",
+          "score": 3,
+          "color": 3
+        },
+        {
+          "text": "Moderately Accurate",
+          "score": 4,
+          "color": 4
+        },
+        {
+          "text": "Very Accurate",
+          "score": 5,
+          "color": 5
+        }
+      ]
+    },
+    {
+      "id": "0cf79e27-e702-45c2-9471-04ac96b58e0e",
+      "text": "Use others for my own ends",
+      "keyed": "minus",
+      "domain": "A",
+      "facet": 2,
+      "ipipId": [
+        "H416",
+        "X24"
+      ],
+      "num": 9,
+      "choices": [
+        {
+          "text": "Very Inaccurate",
+          "score": 5,
+          "color": 1
+        },
+        {
+          "text": "Moderately Inaccurate",
+          "score": 4,
+          "color": 2
+        },
+        {
+          "text": "Neither Accurate Nor Inaccurate",
+          "score": 3,
+          "color": 3
+        },
+        {
+          "text": "Moderately Accurate",
+          "score": 2,
+          "color": 4
+        },
+        {
+          "text": "Very Accurate",
+          "score": 1,
+          "color": 5
+        }
+      ]
+    },
+    {
+      "id": "cda1ca17-b599-4561-a6cd-ff9d36062d27",
+      "text": "Like to tidy up",
+      "keyed": "plus",
+      "domain": "C",
+      "facet": 2,
+      "ipipId": [
+        "H244",
+        "X21"
+      ],
+      "num": 10,
+      "choices": [
+        {
+          "text": "Very Inaccurate",
+          "score": 1,
+          "color": 1
+        },
+        {
+          "text": "Moderately Inaccurate",
+          "score": 2,
+          "color": 2
+        },
+        {
+          "text": "Neither Accurate Nor Inaccurate",
+          "score": 3,
+          "color": 3
+        },
+        {
+          "text": "Moderately Accurate",
+          "score": 4,
+          "color": 4
+        },
+        {
+          "text": "Very Accurate",
+          "score": 5,
+          "color": 5
+        }
+      ]
+    }
+  ],
+  "info": {
+    "name": "Johnson's IPIP NEO-PI-R",
+    "id": "johnson-120-ipip-neo-pi-r",
+    "shortId": "b5-120",
+    "time": 10,
+    "questions": 120,
+    "note": "Recommended",
+    "languages": [
+      {
+        "id": "sq",
+        "text": "Albanian",
+        "complete": true,
+        "verified": false
+      },
+      {
+        "id": "ar",
+        "text": "Arabic",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Rayan Khan"
+          }
+        ]
+      },
+      {
+        "id": "hy",
+        "text": "Armenian",
+        "complete": true,
+        "verified": true,
+        "link": "https://ipip.ori.org/ArmenianIPIP-NEO-120.htm",
+        "translators": [
+          {
+            "name": "Mikayel Harutyunyan"
+          }
+        ]
+      },
+      {
+        "id": "bn",
+        "text": "Bengali",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Shad Iqbal"
+          },
+          {
+            "name": "Shah Moazzem"
+          }
+        ]
+      },
+      {
+        "id": "pt-br",
+        "text": "Brazilian Portuguese",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Grazziano Duarte"
+          }
+        ]
+      },
+      {
+        "id": "bg",
+        "text": "Bulgarian",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Lyubomir Manolov"
+          }
+        ]
+      },
+      {
+        "id": "ca",
+        "text": "Catalan",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Èric Arnau Soler"
+          }
+        ]
+      },
+      {
+        "id": "zh-cn",
+        "text": "Chinese (Simplified)",
+        "complete": true,
+        "verified": true,
+        "translators": [
+          {
+            "name": "Jiangxue Yi",
+            "githubUser": "janshirley"
+          },
+          {
+            "name": "Zhongyang Xu"
+          },
+          {
+            "name": "Jing Qian"
+          },
+          {
+            "name": "Kunning Chen"
+          },
+          {
+            "name": "Lianxin Zhu"
+          },
+          {
+            "name": "Jianlong Ao"
+          }
+        ]
+      },
+      {
+        "id": "zh-hant",
+        "text": "Chinese (Traditional)",
+        "complete": true,
+        "verified": false
+      },
+      {
+        "id": "hr",
+        "text": "Croatian",
+        "complete": true,
+        "verified": true,
+        "link": "https://ipip.ori.org/CroatianIPIP-NEOFacets.htm",
+        "translators": [
+          {
+            "name": "Željko Jerneić"
+          },
+          {
+            "name": "Zvonimir Galic"
+          },
+          {
+            "name": "Maja Parmac Kovacic"
+          },
+          {
+            "name": "Masa Tonkovic"
+          }
+        ]
+      },
+      {
+        "id": "cs",
+        "text": "Czech",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Vit Budina"
+          }
+        ]
+      },
+      {
+        "id": "da",
+        "text": "Danish",
+        "complete": true,
+        "verified": false
+      },
+      {
+        "id": "de",
+        "text": "Deutsch",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Heinz Streib"
+          }
+        ]
+      },
+      {
+        "id": "nl",
+        "text": "Dutch",
+        "complete": true,
+        "verified": true,
+        "link": "https://ipip.ori.org/DutchIPIP-NEO-120.htm",
+        "translators": [
+          {
+            "name": "Eus van Somerenk"
+          }
+        ]
+      },
+      {
+        "id": "en",
+        "text": "English",
+        "complete": true,
+        "verified": true,
+        "link": "https://ipip.ori.org/30FacetNEO-PI-RItems.htm",
+        "translators": [
+          {
+            "name": "John A. Johnson",
+            "description": "Professor Emeritus of Psychology at the Pennsylvania State University"
+          }
+        ]
+      },
+      {
+        "id": "et",
+        "text": "Estonian",
+        "complete": true,
+        "verified": true,
+        "link": "https://ipip.ori.org/EstonianIPIP-NEOFacets.htm",
+        "translators": [
+          {
+            "name": "René Mõttus"
+          },
+          {
+            "name": "Helle Pullmann"
+          },
+          {
+            "name": "Jüri Allik"
+          },
+          {
+            "name": "Liina Haring"
+          },
+          {
+            "name": "Kenn Konstabel"
+          },
+          {
+            "name": "Anu Realo"
+          }
+        ]
+      },
+      {
+        "id": "fi",
+        "text": "Finnish",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Anastasia Tapper",
+            "githubUser": "ankkukku"
+          }
+        ]
+      },
+      {
+        "id": "fr",
+        "text": "French",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Mathew Gravel"
+          }
+        ]
+      },
+      {
+        "id": "he",
+        "text": "Hebrew",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Ben Perry"
+          }
+        ]
+      },
+      {
+        "id": "hi",
+        "text": "Hindi",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Punit Singh",
+            "githubUser": "thepunitsingh"
+          }
+        ]
+      },
+      {
+        "id": "hu",
+        "text": "Hungarian",
+        "complete": true,
+        "verified": false
+      },
+      {
+        "id": "is",
+        "text": "Icelandic",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Franz Jónas Arnar Arnarson"
+          },
+          {
+            "name": "Sigurður Kári Árnason",
+            "githubUser": "sigurdurkari"
+          }
+        ]
+      },
+      {
+        "id": "id",
+        "text": "Indonesian",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "David Adi Nugroho",
+            "githubUser": "lakuapik"
+          }
+        ]
+      },
+      {
+        "id": "it",
+        "text": "Italian",
+        "complete": true,
+        "verified": true,
+        "link": "https://ipip.ori.org/ItalianIPIP-NEO-120.htm",
+        "translators": [
+          {
+            "name": "Michelangelo Vianello"
+          }
+        ]
+      },
+      {
+        "id": "ja",
+        "text": "Japanese",
+        "complete": true,
+        "verified": true,
+        "link": "https://ipip.ori.org/JapaneseIPIP-NEOFacets.htm",
+        "translators": [
+          {
+            "name": "Omar Karlin"
+          }
+        ]
+      },
+      {
+        "id": "ko",
+        "text": "Korean",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "TimeTREE"
+          }
+        ]
+      },
+      {
+        "id": "no",
+        "text": "Norwegian",
+        "complete": true,
+        "verified": true,
+        "translators": [
+          {
+            "name": "Eli Huseby"
+          }
+        ]
+      },
+      {
+        "id": "fa",
+        "text": "Persian",
+        "complete": true,
+        "verified": false
+      },
+      {
+        "id": "pl",
+        "text": "Polish",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Maryla Królikowska"
+          }
+        ]
+      },
+      {
+        "id": "pt",
+        "text": "Portuguese",
+        "complete": false,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Keila Brockveld"
+          }
+        ]
+      },
+      {
+        "id": "ro",
+        "text": "Romanian",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Cătălin Topală",
+            "githubUser": "catalintopala"
+          }
+        ]
+      },
+      {
+        "id": "ru",
+        "text": "Russian",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Javid Askerov",
+            "githubUser": "askeroff"
+          }
+        ]
+      },
+      {
+        "id": "sr",
+        "text": "Serbian",
+        "complete": true,
+        "verified": true,
+        "link": "https://ipip.ori.org/Serbian2544Items.htm",
+        "translators": [
+          {
+            "name": "Snezana Smederevac"
+          },
+          {
+            "name": "Dusanka Mitrovic"
+          },
+          {
+            "name": "Petar Colovic"
+          },
+          {
+            "name": "Milan Oljaca"
+          }
+        ]
+      },
+      {
+        "id": "ss",
+        "text": "Siswati",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Thembinkosi Dube"
+          }
+        ]
+      },
+      {
+        "id": "sl",
+        "text": "Slovenian",
+        "complete": true,
+        "verified": true,
+        "link": "https://ipip.ori.org/SloveneIPIP-NEOFacets.htm",
+        "translators": [
+          {
+            "name": "Janek Musek"
+          }
+        ]
+      },
+      {
+        "id": "es",
+        "text": "Spanish",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Eduardo Calle"
+          }
+        ]
+      },
+      {
+        "id": "sv",
+        "text": "Swedish",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Martin Bäckström",
+            "githubUser": "SwedishBarbarossa"
+          }
+        ]
+      },
+      {
+        "id": "th",
+        "text": "Thai",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Maneepailin Sriuthenchai",
+            "githubUser": "linsuri"
+          }
+        ]
+      },
+      {
+        "id": "tr",
+        "text": "Turkish",
+        "complete": true,
+        "verified": true,
+        "link": "https://ipip.ori.org/Turkish924Items.htm",
+        "translators": [
+          {
+            "name": "Prof. Oya Somer"
+          },
+          {
+            "name": "Mediha Korkmaz"
+          },
+          {
+            "name": "Arkun Tatar"
+          }
+        ]
+      },
+      {
+        "id": "uk",
+        "text": "Ukrainian",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Elena Kunina",
+            "githubUser": "Menolas"
+          }
+        ]
+      },
+      {
+        "id": "ur",
+        "text": "Urdu",
+        "complete": true,
+        "verified": true,
+        "link": "https://sites.google.com/site/mailtoiftikhar/big-five-ipip-neo-short-scale-urdu-translation",
+        "translators": [
+          {
+            "name": "Engr. Ahmad Khan"
+          }
+        ]
+      },
+      {
+        "id": "vi",
+        "text": "Vietnamese",
+        "complete": true,
+        "verified": false,
+        "translators": [
+          {
+            "name": "Nguyễn Hữu Trung"
+          }
+        ]
+      }
+    ]
+  },
+  "totalQuestions": 120
+}
