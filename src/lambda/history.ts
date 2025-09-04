@@ -15,11 +15,11 @@ const createResponse = (statusCode: number, body: any, headers?: any): APIGatewa
   };
 };
 
-// GET handler for history
+// GET handler for history (stateless)
 const handleGet = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
   try {
     const { userId } = event.queryStringParameters || {};
-
+    
     if (!userId) {
       return createResponse(400, { error: 'userId is required' });
     }

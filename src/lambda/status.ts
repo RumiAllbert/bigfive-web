@@ -33,7 +33,8 @@ const handleGet = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyRe
       userId: userId || 'unknown',
       status: 'info_only', // This API doesn't track status
       message: 'This is a stateless API. Track assessment status on your side.',
-      apiType: 'stateless'
+      apiType: 'stateless',
+      answersCount: 0
     });
 
   } catch (error) {

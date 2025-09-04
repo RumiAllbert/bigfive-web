@@ -345,10 +345,10 @@ class LambdaAPITester {
 
     const startTime = Date.now();
 
-    // Test concurrent requests
+    // Test concurrent requests (include userId to satisfy API requirement)
     const promises = [];
     for (let i = 0; i < 5; i++) {
-      promises.push(this.makeRequest('/assessment/questions'));
+      promises.push(this.makeRequest(`/assessment/questions?userId=perf-${Date.now()}-${i}`));
     }
 
     const results = await Promise.all(promises);
