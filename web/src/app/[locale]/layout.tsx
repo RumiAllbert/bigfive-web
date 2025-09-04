@@ -1,19 +1,18 @@
-import '@/styles/globals.css';
-import { Metadata, Viewport } from 'next';
-import { fontSans } from '@/config/fonts';
-import { Providers } from '../providers';
-import { Navbar } from '@/components/navbar';
-import clsx from 'clsx';
-import Footer from '@/components/footer';
-import { ThemeProviderProps } from 'next-themes/dist/types';
-import { GoogleAnalytics } from '@next/third-parties/google';
-import { basePath, getNavItems, locales, siteConfig } from '@/config/site';
-import { unstable_setRequestLocale } from 'next-intl/server';
-import { getTranslations } from 'next-intl/server';
-import { Analytics } from '@vercel/analytics/react';
-import useTextDirection from '@/hooks/use-text-direction';
-import Script from 'next/script';
 import CookieBanner from '@/components/cookie-consent';
+import Footer from '@/components/footer';
+import { Navbar } from '@/components/navbar';
+import { fontSans } from '@/config/fonts';
+import { basePath, getNavItems, locales, siteConfig } from '@/config/site';
+import { getTextDirection } from '@/hooks/use-text-direction';
+import '@/styles/globals.css';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/react';
+import clsx from 'clsx';
+import { Metadata, Viewport } from 'next';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { ThemeProviderProps } from 'next-themes/dist/types';
+import Script from 'next/script';
+import { Providers } from '../providers';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -87,7 +86,7 @@ export default async function RootLayout({
 }) {
   const gaId = process.env.NEXT_PUBLIC_ANALYTICS_ID || '';
   unstable_setRequestLocale(locale);
-  const direction = useTextDirection(locale);
+  const direction = getTextDirection(locale);
 
   const navItems = await getNavItems({ locale, linkType: 'navItems' });
   const navMenuItems = await getNavItems({ locale, linkType: 'navMenuItems' });
