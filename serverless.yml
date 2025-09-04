@@ -38,6 +38,7 @@ package:
     - "performance-test.js"
     - "api-*.js"
     - ".git/**"
+  include:
     - "node_modules/**"
 
 # Function definitions
