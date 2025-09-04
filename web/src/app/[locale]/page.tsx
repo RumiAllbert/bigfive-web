@@ -1,10 +1,6 @@
-import { useTranslations } from 'next-intl';
-import { Link } from '@nextui-org/link';
-import { button as buttonStyles } from '@nextui-org/theme';
-import { title, subtitle } from '@/components/primitives';
-import clsx from 'clsx';
 import { FeaturesGrid } from '@/components/features-grid';
 import {
+  ArrowRightIcon,
   ExperimentIcon,
   GithubIcon,
   LanguageIcon,
@@ -12,17 +8,20 @@ import {
   MoneyIcon,
   PlusLinearIcon
 } from '@/components/icons';
-import { ArrowRightIcon } from '@/components/icons';
+import { subtitle, title } from '@/components/primitives';
 import { siteConfig } from '@/config/site';
-import { compareDesc } from 'date-fns';
-import { allPosts } from 'contentlayer/generated';
-import { PostCard } from '@/components/post-card';
+import { Link } from '@nextui-org/link';
+import { button as buttonStyles } from '@nextui-org/theme';
+import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
+// import { compareDesc } from 'date-fns';
+// import { allPosts } from 'contentlayer/generated';
+// import { PostCard } from '@/components/post-card';
 import { SonarPulse } from '@/components/sonar-pulse';
-import { Button } from '@nextui-org/button';
-import { unstable_setRequestLocale } from 'next-intl/server';
-import { Chip, Tooltip } from '@nextui-org/react';
-import NextLink from 'next/link';
 import { Translated } from '@/components/translated';
+import { Button } from '@nextui-org/button';
+import { Chip, Tooltip } from '@nextui-org/react';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 interface Props {
   params: { locale: string };
@@ -33,9 +32,7 @@ export default function Home({ params: { locale } }: Props) {
   const t = useTranslations('frontpage');
   const f = useTranslations('facets');
 
-  const posts = allPosts
-    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
-    .slice(0, 3);
+  const posts = []; // Temporarily disabled - contentlayer removed
 
   const features = [
     {
@@ -237,7 +234,8 @@ export default function Home({ params: { locale } }: Props) {
         </SonarPulse>
       </div>
 
-      <div className='text-center mx-2'>
+      {/* Blog posts section temporarily disabled - contentlayer removed */}
+      {/* <div className='text-center mx-2'>
         <Link href='/articles' color='foreground'>
           <h1 className={title()}>Latest posts</h1>
         </Link>
@@ -261,7 +259,7 @@ export default function Home({ params: { locale } }: Props) {
             Show all articles ...
           </Link>
         </div>
-      </div>
+      </div> */}
 
       <Translated />
     </section>
