@@ -13,9 +13,17 @@ interface ResultsRequest {
   language?: string;
 }
 
+interface DomainComputedResult {
+  score: number;
+  count: number;
+  result: string; // high | neutral | low
+  average: number; // 1-5 scale
+  percentage: number; // 0-100 of max possible
+}
+
 interface AssessmentResults {
-  overall: { [key: string]: { score: number; count: number; result: string } };
-  facets: { [key: string]: { [key: number]: { score: number; count: number; result: string } } };
+  overall: { [key: string]: DomainComputedResult };
+  facets: { [key: string]: { [key: number]: DomainComputedResult } };
   generatedAt: Date;
   rawScores: { [key: string]: { score: number; count: number } };
 }
@@ -41,6 +49,17 @@ const calculateResult = (score: number, count: number): string => {
   if (avgScore > 3.5) return 'high';
   if (avgScore < 2.5) return 'low';
   return 'neutral';
+};
+
+// Calculate average (1-5) and percentage (0-100 of max possible)
+const calculateAverage = (score: number, count: number): number => {
+  return count > 0 ? score / count : 0;
+};
+
+const calculatePercentage = (score: number, count: number): number => {
+  if (count === 0) return 0;
+  const pct = (score / (count * 5)) * 100;
+  return Math.round(pct);
 };
 
 // POST handler for results calculation
@@ -122,7 +141,9 @@ const handlePost = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyR
         assessmentResults.overall[domain] = {
           score: data.score,
           count: data.count,
-          result: calculateResult(data.score, data.count)
+          result: calculateResult(data.score, data.count),
+          average: calculateAverage(data.score, data.count),
+          percentage: calculatePercentage(data.score, data.count)
         };
       }
     });
@@ -135,7 +156,9 @@ const handlePost = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyR
           assessmentResults.facets[domain][parseInt(facet)] = {
             score: data.score,
             count: data.count,
-            result: calculateResult(data.score, data.count)
+            result: calculateResult(data.score, data.count),
+            average: calculateAverage(data.score, data.count),
+            percentage: calculatePercentage(data.score, data.count)
           };
         }
       });

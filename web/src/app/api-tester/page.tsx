@@ -38,10 +38,10 @@ type ValidateAnswersResponse = {
 type ResultsResponse = {
   assessmentId: string;
   results: {
-    overall: Record<string, { score: number; count: number; result: string }>;
+    overall: Record<string, { score: number; count: number; result: string; average?: number; percentage?: number }>;
     facets: Record<
       string,
-      Record<number, { score: number; count: number; result: string }>
+      Record<number, { score: number; count: number; result: string; average?: number; percentage?: number }>
     >;
     generatedAt?: string | Date;
     rawScores?: Record<string, { score: number; count: number }>;

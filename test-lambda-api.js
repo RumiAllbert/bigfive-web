@@ -299,7 +299,10 @@ class LambdaAPITester {
         const level = data.result === 'high' ? '🔥 High' :
                      data.result === 'low' ? '❄️ Low' : '⚖️ Neutral';
 
-        console.log(`  ${domainNames[domain]}: ${level} (${data.score}/${data.count * 5})`);
+        const pct = typeof data.percentage === 'number'
+          ? `${data.percentage}%`
+          : `${Math.round((data.score / (data.count * 5)) * 100)}%`;
+        console.log(`  ${domainNames[domain]}: ${level} (${pct})`);
       });
     }
 

@@ -174,27 +174,37 @@ Calculates personality assessment results from user answers. Send the assessment
       "O": {
         "score": 45,
         "count": 10,
-        "result": "high"
+        "result": "high",
+        "average": 4.5,
+        "percentage": 90
       },
       "C": {
         "score": 32,
         "count": 10,
-        "result": "neutral"
+        "result": "neutral",
+        "average": 3.2,
+        "percentage": 64
       },
       "E": {
         "score": 50,
         "count": 10,
-        "result": "high"
+        "result": "high",
+        "average": 5,
+        "percentage": 100
       },
       "A": {
         "score": 28,
         "count": 10,
-        "result": "low"
+        "result": "low",
+        "average": 2.8,
+        "percentage": 56
       },
       "N": {
         "score": 25,
         "count": 10,
-        "result": "low"
+        "result": "low",
+        "average": 2.5,
+        "percentage": 50
       }
     },
     "facets": {
@@ -202,12 +212,16 @@ Calculates personality assessment results from user answers. Send the assessment
         "1": {
           "score": 8,
           "count": 2,
-          "result": "high"
+          "result": "high",
+          "average": 4,
+          "percentage": 80
         },
         "2": {
           "score": 6,
           "count": 2,
-          "result": "neutral"
+          "result": "neutral",
+          "average": 3,
+          "percentage": 60
         }
       }
     },
@@ -289,6 +303,10 @@ curl "https://your-domain.com/api/assessment/history?userId=user123"
 - **high** - Score > 3.5 (above average)
 - **neutral** - Score between 2.5-3.5 (average)
 - **low** - Score < 2.5 (below average)
+
+### Derived Metrics
+- **average**: `score / count` on the 1–5 scale
+- **percentage**: `round(score / (count × 5) × 100)`
 
 ### Assessment Status
 - **in_progress** - Assessment started, answers being collected

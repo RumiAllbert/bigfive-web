@@ -109,7 +109,10 @@ async function testAPI() {
         'N': 'Neuroticism'
       };
 
-      console.log(`  ${domainNames[domain]}: ${data.result} (${data.score}/${data.count * 5})`);
+      const pct = typeof data.percentage === 'number'
+        ? `${data.percentage}%`
+        : `${Math.round((data.score / (data.count * 5)) * 100)}%`;
+      console.log(`  ${domainNames[domain]}: ${data.result} (${pct})`);
     });
 
     console.log('\n🎉 API test completed successfully!');

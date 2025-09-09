@@ -224,9 +224,84 @@ node test-runner.js all  # Verify everything works
 | **Cold Starts** | None | ~100-500ms |
 | **Best For** | Complete websites | API integrations |
 
-## Help wanted
+## Facets
+Neuroticism
 
-If you want to help by translating the items to other languages look [here](https://b5.translations.alheimsins.net/).
+Anxiety
+
+Anger
+
+Depression
+
+Self-Consciousness
+
+Immoderation
+
+Vulnerability
+
+Extraversion
+
+(Your results page does not list these directly, but standard facets are:)
+
+Friendliness (Warmth)
+
+Gregariousness
+
+Assertiveness
+
+Activity Level
+
+Excitement-Seeking
+
+Cheerfulness (Positive Emotions)
+
+Openness to Experience
+
+(Standard facets are:)
+
+Imagination
+
+Artistic Interests
+
+Emotionality
+
+Adventurousness
+
+Intellect
+
+Liberalism
+
+Agreeableness
+
+(Standard facets are:)
+
+Trust
+
+Morality (Straightforwardness)
+
+Altruism
+
+Cooperation
+
+Modesty
+
+Sympathy (Tender-Mindedness)
+
+Conscientiousness
+
+(Standard facets are:)
+
+Self-Efficacy (Competence)
+
+Orderliness
+
+Dutifulness
+
+Achievement-Striving
+
+Self-Discipline
+
+Cautiousness (Deliberation)
 
 ## License
 

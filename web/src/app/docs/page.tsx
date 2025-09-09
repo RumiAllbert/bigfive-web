@@ -462,15 +462,15 @@ curl -X POST YOUR_API_URL/assessment/results \\
   "assessmentId": "assessment_user123_1643723456789",
   "results": {
     "overall": {
-      "O": {"score": 45, "count": 10, "result": "high"},
-      "C": {"score": 32, "count": 10, "result": "neutral"},
-      "E": {"score": 50, "count": 10, "result": "high"},
-      "A": {"score": 28, "count": 10, "result": "low"},
-      "N": {"score": 25, "count": 10, "result": "low"}
+      "O": {"score": 45, "count": 10, "result": "high", "average": 4.5, "percentage": 90},
+      "C": {"score": 32, "count": 10, "result": "neutral", "average": 3.2, "percentage": 64},
+      "E": {"score": 50, "count": 10, "result": "high", "average": 5.0, "percentage": 100},
+      "A": {"score": 28, "count": 10, "result": "low", "average": 2.8, "percentage": 56},
+      "N": {"score": 25, "count": 10, "result": "low", "average": 2.5, "percentage": 50}
     },
     "facets": {
       "O": {
-        "1": {"score": 8, "count": 2, "result": "high"}
+        "1": {"score": 8, "count": 2, "result": "high", "average": 4.0, "percentage": 80}
       }
     },
     "generatedAt": "2024-01-01T00:00:00.000Z",

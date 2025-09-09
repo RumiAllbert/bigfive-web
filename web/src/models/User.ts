@@ -38,6 +38,8 @@ export interface AssessmentResult {
       score: number;
       count: number;
       result: 'low' | 'neutral' | 'high';
+      average?: number; // 1-5
+      percentage?: number; // 0-100
     };
   };
   facets: {
@@ -46,6 +48,8 @@ export interface AssessmentResult {
         score: number;
         count: number;
         result: 'low' | 'neutral' | 'high';
+        average?: number; // 1-5
+        percentage?: number; // 0-100
       };
     };
   };

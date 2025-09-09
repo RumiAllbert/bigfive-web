@@ -76,10 +76,15 @@ export async function POST(request: NextRequest) {
       return 'neutral';
     };
 
+    const calculateAverage = (score: number, count: number): number =>
+      count > 0 ? score / count : 0;
+    const calculatePercentage = (score: number, count: number): number =>
+      count === 0 ? 0 : Math.round((score / (count * 5)) * 100);
+
     // Prepare results object with proper typing
     const assessmentResults: {
-      overall: { [key: string]: { score: number; count: number; result: string } };
-      facets: { [key: string]: { [key: number]: { score: number; count: number; result: string } } };
+      overall: { [key: string]: { score: number; count: number; result: string; average: number; percentage: number } };
+      facets: { [key: string]: { [key: number]: { score: number; count: number; result: string; average: number; percentage: number } } };
       generatedAt: Date;
       rawScores: { [key: string]: { score: number; count: number } };
     } = {
@@ -95,7 +100,9 @@ export async function POST(request: NextRequest) {
         assessmentResults.overall[domain] = {
           score: data.score,
           count: data.count,
-          result: calculateResult(data.score, data.count)
+          result: calculateResult(data.score, data.count),
+          average: calculateAverage(data.score, data.count),
+          percentage: calculatePercentage(data.score, data.count)
         };
       }
     });
@@ -108,7 +115,9 @@ export async function POST(request: NextRequest) {
           assessmentResults.facets[domain][parseInt(facet)] = {
             score: data.score,
             count: data.count,
-            result: calculateResult(data.score, data.count)
+            result: calculateResult(data.score, data.count),
+            average: calculateAverage(data.score, data.count),
+            percentage: calculatePercentage(data.score, data.count)
           };
         }
       });

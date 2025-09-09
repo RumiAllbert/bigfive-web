@@ -96,7 +96,10 @@ async function completeTest() {
       const level = data.result === 'high' ? '🔥 High' :
                    data.result === 'low' ? '❄️ Low' : '⚖️ Neutral';
 
-      console.log(`  ${domainNames[domain]}: ${level} (${data.score}/${data.count * 5})`);
+      const pct = typeof data.percentage === 'number'
+        ? `${data.percentage}%`
+        : `${Math.round((data.score / (data.count * 5)) * 100)}%`;
+      console.log(`  ${domainNames[domain]}: ${level} (${pct})`);
     });
 
     console.log('\n🔍 FACET BREAKDOWN:');
@@ -123,7 +126,10 @@ async function completeTest() {
           const facetName = facetNames[domain]?.[parseInt(facet)] || `Facet ${facet}`;
           const level = data.result === 'high' ? 'High' : data.result === 'low' ? 'Low' : 'Neutral';
 
-          console.log(`    ${facetName}: ${level} (${data.score}/${data.count * 5})`);
+          const fpct = typeof data.percentage === 'number'
+            ? `${data.percentage}%`
+            : `${Math.round((data.score / (data.count * 5)) * 100)}%`;
+          console.log(`    ${facetName}: ${level} (${fpct})`);
         });
       }
     });
