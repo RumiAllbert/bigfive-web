@@ -53,7 +53,9 @@ const calculateResult = (score: number, count: number): string => {
 
 // Calculate average (1-5) and percentage (0-100 of max possible)
 const calculateAverage = (score: number, count: number): number => {
-  return count > 0 ? score / count : 0;
+  if (count === 0) return 0;
+  const avg = score / count;
+  return Math.round(avg * 100) / 100; // two decimals
 };
 
 const calculatePercentage = (score: number, count: number): number => {

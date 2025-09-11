@@ -305,7 +305,7 @@ curl "https://your-domain.com/api/assessment/history?userId=user123"
 - **low** - Score < 2.5 (below average)
 
 ### Derived Metrics
-- **average**: `score / count` on the 1–5 scale
+- **average**: `round((score / count) × 100) / 100` on the 1–5 scale (two decimals)
 - **percentage**: `round(score / (count × 5) × 100)`
 
 ### Assessment Status

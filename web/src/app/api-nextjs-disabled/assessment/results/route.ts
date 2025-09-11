@@ -76,8 +76,11 @@ export async function POST(request: NextRequest) {
       return 'neutral';
     };
 
-    const calculateAverage = (score: number, count: number): number =>
-      count > 0 ? score / count : 0;
+    const calculateAverage = (score: number, count: number): number => {
+      if (count === 0) return 0;
+      const avg = score / count;
+      return Math.round(avg * 100) / 100; // two decimals
+    };
     const calculatePercentage = (score: number, count: number): number =>
       count === 0 ? 0 : Math.round((score / (count * 5)) * 100);
 
